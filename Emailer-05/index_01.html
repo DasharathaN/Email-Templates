@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="x-apple-disable-message-reformatting">
+	<title>The Magazine</title>
+	<!--[if mso]>
+	<noscript>
+		<xml>
+			<o:OfficeDocumentSettings>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+			</o:OfficeDocumentSettings>
+		</xml>
+	</noscript>
+	<![endif]-->
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			min-width: 100%;
+			background-color: #f4f1ea;
+		}
+
+		table {
+			border-spacing: 0;
+			border-collapse: collapse;
+		}
+
+		td {
+			padding: 0;
+		}
+
+		img {
+			border: 0;
+			display: block;
+			line-height: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.wrapper {
+			width: 100%;
+			table-layout: fixed;
+			background-color: #f4f1ea;
+			padding: 0px 0 20px;
+		}
+
+		.main {
+			width: 100%;
+			max-width: 620px;
+			background-color: #f4f1ea;
+			margin: 0 auto;
+		}
+
+		.content-padding {
+			padding-left: 28px;
+			padding-right: 28px;
+		}
+
+		.hero-bg {
+			background-color: #40e4c1;
+		}
+
+		.section-light {
+			background-color: #ece9e2;
+		}
+
+		.section-dark {
+			background-color: #174c45;
+		}
+
+		.section-charcoal {
+			background-color: #333333;
+		}
+
+		.eyebrow {
+			font-family: Georgia, serif;
+			font-size: 11px;
+			line-height: 15px;
+			letter-spacing: 1.5px;
+			color: #2b2b2b;
+			text-transform: uppercase;
+		}
+
+		.small-copy {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 11px;
+			line-height: 16px;
+			color: #2b2b2b;
+		}
+
+		.body-copy {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 13px;
+			line-height: 21px;
+			color: #2b2b2b;
+		}
+
+		.headline {
+			font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+			font-size: 40px;
+			line-height: 42px;
+			color: #111111;
+			text-align: center;
+		}
+
+		.section-title {
+			font-family: Georgia, serif;
+			font-size: 20px;
+			line-height: 26px;
+			color: #ffffff;
+		}
+
+		.section-title-dark {
+			font-family: Georgia, serif;
+			font-size: 20px;
+			line-height: 26px;
+			color: #222222;
+		}
+
+		.story-title {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 20px;
+			line-height: 26px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: #ffffff;
+		}
+
+		.story-title-dark {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			color: #222222;
+		}
+
+		.muted-dark {
+			color: #d6e3df;
+		}
+
+		.muted-light {
+			color: #717171;
+		}
+
+		.btn {
+			display: inline-block;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			line-height: 12px;
+			letter-spacing: 0.6px;
+			color: #0e322d;
+			background-color: #40e4c1;
+			padding: 12px 20px;
+			border: 1px solid #40e4c1;
+		}
+
+		.btn-dark {
+			display: inline-block;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			line-height: 12px;
+			letter-spacing: 0.6px;
+			color: #ffffff;
+			background-color: transparent;
+			padding: 11px 18px;
+			border: 1px solid #ffffff;
+		}
+
+		.cta-arrow {
+			font-size: 16px;
+			line-height: 12px;
+			vertical-align: baseline;
+		}
+
+		.divider-space {
+			font-size: 0;
+			line-height: 0;
+		}
+
+		.footer-link {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 11px;
+			line-height: 16px;
+			color: #4a4a4a;
+			text-decoration: underline;
+		}
+
+		@media screen and (max-width: 619px) {
+			.main,
+			.column,
+			.column img {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+
+			.popular-cell {
+				display: block !important;
+				width: 100% !important;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+				padding-bottom: 10px !important;
+			}
+
+			.popular-cell img {
+				width: 100% !important;
+			}
+
+			.popular-cell-last {
+				padding-bottom: 0 !important;
+			}
+
+			.mobile-stack {
+				display: block !important;
+				width: 100% !important;
+			}
+
+			.content-padding {
+				padding-left: 18px !important;
+				padding-right: 18px !important;
+			}
+
+			.headline {
+				font-size: 25px !important;
+				line-height: 33px !important;
+			}
+
+			.story-title,
+			.story-title-dark {
+				font-size: 16px !important;
+				line-height: 22px !important;
+			}
+			.pad-bottom {
+				padding-bottom: 20px !important;
+			}
+			.mobile-response {
+				width: 100% !important;
+				height: auto !important;
+			}
+			.padding-left {
+				padding-left: 0px !important;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div style="display:none;font-size:1px;color:#f4f1ea;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+		Celebrating dance floor fillers everywhere with notes from the editor, popular picks, inspirations, and hotspots.
+	</div>
+	<center class="wrapper">
+		<table role="presentation" class="main" width="620" align="center" style="width:100%;max-width:620px;">
+			<tr>
+				<td class="content-padding hero-bg" style="padding-top:18px;padding-bottom:14px;">
+					<table role="presentation" width="100%">
+						<tr>
+							<td class="small-copy" style="vertical-align:middle;">Shop</td>
+							<td align="center" style="vertical-align:middle;">
+								<img src="images/Logo.png" alt="The Magazine" width="151">
+							</td>
+							<td class="small-copy" align="right" style="vertical-align:middle;">Learn</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="content-padding hero-bg" style="padding-top:10px;padding-bottom:22px;">
+					<p class="headline">Celebrating dance<br>floor fillers everywhere.</p>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<img src="images/Banner_01.png" alt="People crossing a striped city crossing" width="620">
+				</td>
+			</tr>
+
+			<tr>
+				<td class="content-padding" style="padding-top:18px;padding-bottom:28px; background-color:#f4f1ea;">
+					<table role="presentation" width="100%">
+						<tr>
+							<td>
+								<p class="eyebrow muted-light" style="color:#767676;">16/05/2024</p>
+								<p class="eyebrow" style="padding-top:4px;padding-bottom:14px;">Notes From The Editor</p>
+								<p class="body-copy">It&apos;s been a little over a month since we launched Redistricts Magazine, and we&apos;ve been absolutely thrilled with the response we&apos;ve received. So many of you have messaged and emailed us, shared articles you&apos;ve enjoyed reading, and we&apos;ve loved seeing every one of them. We&apos;ve also received a ton of messages from new up-and-coming artists who&apos;ve sent us their music, and we&apos;ve enjoyed listening to them all. We have many more exciting features planned for the coming month. Thank you so much for reading, and we couldn&apos;t continue this journey without you.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:18px;">
+								<table role="presentation">
+									<tr>
+										<td style="padding-right:10px;vertical-align:middle;">
+											<img src="images/James.png" alt="James Dinsdale" width="24" style="border-radius:12px;">
+										</td>
+										<td class="small-copy" style="font-size:12px;line-height:18px;font-weight:bold;vertical-align:middle;">James Dinsdale - Editor</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:20px;">
+								<a href="#" class="btn">Read Now &nbsp;<span class="cta-arrow">&rsaquo;</span></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="content-padding section-light" style="padding-top:24px;padding-bottom:28px;">
+					<table role="presentation" width="100%">
+						<tr>
+							<td>
+								<p class="section-title-dark">Popular</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:18px;padding-bottom:14px;">
+								<table role="presentation" width="100%">
+									<tr>
+										<td class="mobile-stack popular-cell" width="33.33%" style="padding-right:6px;">
+											<img src="images/Popular_01.png" alt="Popular story 1" width="182">
+										</td>
+										<td class="mobile-stack popular-cell" width="33.33%" style="padding-left:3px;padding-right:3px;">
+											<img src="images/Popular_02.png" alt="Popular story 2" width="182">
+										</td>
+										<td class="mobile-stack popular-cell popular-cell-last" width="33.33%" style="padding-left:6px;">
+											<img src="images/Popular_03.png" alt="Popular story 3" width="182">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<p class="body-copy" style="max-width:470px;margin:0 auto;">In our first month we published reviews of some great new music by such as Apromana, Janus Rasmussen, and Shubi Iqbal.</p>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" style="padding-top:18px;">
+								<p class="small-copy" style="font-size:12px;line-height:19px;color:#5c5c5c;">There&apos;s many more online now. Enjoy reading.</p>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" style="padding-top:20px;">
+								<a href="#" class="btn">View All &nbsp;<span class="cta-arrow">&rsaquo;</span></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="content-padding section-dark" style="padding-top:24px;padding-bottom:24px;">
+					<table role="presentation" width="100%">
+						<tr>
+							<td>
+								<p class="section-title">Inspirations</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:16px;">
+								<img src="images/Howling.png" alt="Howling - Colure" width="564">
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:14px;">
+								<p class="eyebrow muted-dark">17/05/2024</p>
+								<p class="story-title" style="padding-top:5px;">Howling - Colure</p>
+								<p class="body-copy muted-dark" style="padding-top:10px;">This superb album, a fantastic showcase of the collective skills of these three talented producers.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:18px;padding-bottom:26px;">
+								<a href="#" class="btn">Read Now &nbsp;<span class="cta-arrow">&rsaquo;</span></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="images/Perlin.png" alt="59 Perlen - By Far" width="564">
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:14px;">
+								<p class="eyebrow muted-dark">17/05/2024</p>
+								<p class="story-title" style="padding-top:5px;">59 Perlen - By Far</p>
+								<p class="body-copy muted-dark" style="padding-top:10px;">The new single By Far from 59 Perlen is a stunning techno track which is sure to get your feet tapping.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:18px;">
+								<a href="#" class="btn">Read Now &nbsp;<span class="cta-arrow">&rsaquo;</span></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="content-padding section-charcoal" style="padding-top:24px;padding-bottom:24px;">
+					<table role="presentation" width="100%">
+						<tr>
+							<td colspan="2" style="padding-bottom:16px;">
+								<p class="section-title">Hotspots</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="mobile-stack pad-bottom" width="50%" style="padding-right:8px;vertical-align:top;">
+								<img src="images/Hotsports_01.png" alt="How was that so easy" width="274" class="mobile-response">
+								<p class="eyebrow muted-dark" style="padding-top:12px;">13/05/2024</p>
+								<p class="story-title" style="font-size:18px;line-height:24px;padding-top:5px;">How Was That So Easy</p>
+								<p class="body-copy muted-dark" style="padding-top:10px;padding-bottom:16px;">The Guardians won a nail-biter right near the bay&apos;s edge, thanks to Will Brennan&apos;s RBI.</p>
+								<a href="#" class="btn-dark">Read Now &nbsp;<span class="cta-arrow">&rsaquo;</span></a>
+							</td>
+							<td class="mobile-stack padding-left" width="50%" style="padding-left:8px;vertical-align:top;">
+								<img src="images/Hotsports_02.png" alt="Penn State? Texas A&amp;M?" width="274" class="mobile-response">
+								<p class="eyebrow muted-dark" style="padding-top:12px;">14/05/2024</p>
+								<p class="story-title" style="font-size:18px;line-height:24px;padding-top:5px;">Penn State? Texas A&amp;M?</p>
+								<p class="body-copy muted-dark" style="padding-top:10px;padding-bottom:16px;">The NHL Draft may be tonight, and NHL free agency is coming quickly. But college football is close.</p>
+								<a href="#" class="btn-dark">Read Now &nbsp;<span class="cta-arrow">&rsaquo;</span></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="content-padding" style="padding-top:20px;padding-bottom:26px;background-color:#f4f1ea;">
+					<table role="presentation" width="100%">
+						<tr>
+							<td align="center" style="padding-bottom:16px;">
+								<p class="small-copy">
+									<a href="#" class="footer-link">Unsubscribe</a>
+									<span style="color:#7b7b7b;"> | </span>
+									<a href="#" class="footer-link">Manage Preferences</a>
+									<span style="color:#7b7b7b;"> | </span>
+									<a href="#" class="footer-link">View Online</a>
+								</p>
+								<p class="small-copy" style="padding-top:8px;color:#666666;">Made this email yourself too? Sign up here.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="border-top:1px solid #d7d2c8;padding-top:18px;">
+								<table role="presentation" width="100%">
+									<tr>
+										<td class="mobile-stack" style="vertical-align:middle;">
+											<img src="images/Logo.png" alt="The Magazine" width="151">
+										</td>
+										<td class="mobile-stack" align="right" style="vertical-align:middle;">
+											<table role="presentation" align="right">
+												<tr>
+													<td style="padding-left:10px;"><img src="images/Facebook.png" alt="Facebook" width="14"></td>
+													<td style="padding-left:10px;"><img src="images/instagram.png" alt="Instagram" width="14"></td>
+													<td style="padding-left:10px;"><img src="images/twitter.png" alt="Twitter" width="14"></td>
+													<td style="padding-left:10px;"><img src="images/Youtube.png" alt="YouTube" width="14"></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" style="padding-top:16px;">
+								<p class="small-copy" style="color:#4d4d4d;">4577 Washington Ave, Manchester, Kentucky 39495</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>
